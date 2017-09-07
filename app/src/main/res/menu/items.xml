@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="Search"
+        app:showAsAction="always"
+        android:actionViewClass="android.support.v7.widget.SearchView"/>
+    <item
+        android:id="@+id/done"
+        android:icon="@drawable/done"
+        android:title="Done"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/all_items"
+        android:orderInCategory="100"
+        android:title="Items"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/selected_items"
+        android:orderInCategory="100"
+        android:title="Selected Items"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/paid_items"
+        android:orderInCategory="100"
+        android:title="Paid Items"
+        app:showAsAction="never"/>
+</menu>

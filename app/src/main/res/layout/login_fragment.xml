@@ -1,0 +1,53 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3F2FD"
+    tools:context="ke.co.dataintegrated.mobitillretail.login.LoginFragment">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp72"
+        android:src="@drawable/mobitill"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="@dimen/dp10"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="@dimen/dp10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

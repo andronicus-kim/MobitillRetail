@@ -1,0 +1,20 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ke.co.dataintegrated.mobitillretail.payment.PayFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp16"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="@dimen/dp5"
+        />
+
+</LinearLayout>
