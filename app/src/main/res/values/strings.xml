@@ -7,8 +7,19 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="payment"><u>PAYMENT</u></string>
+
+    <string-array name="services">
+        <item>Category</item>
+        <item>Fix</item>
+        <item>Open</item>
+        <item>Quantity</item>
+        <item>Menu_category</item>
+    </string-array>
+
+    <string name="merchant_services">Merchant Services</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="payment"><u>PAYMENT</u></string>
 
 </resources>

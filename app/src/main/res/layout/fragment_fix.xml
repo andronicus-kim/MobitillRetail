@@ -1,0 +1,30 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context="ke.co.dataintegrated.mobitillretail.items.FragmentFix">
+
+    <TextView
+        android:id="@+id/tv_fix_label"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp5"
+        android:textSize="@dimen/sp20"
+        tools:text="@string/hello_blank_fragment"/>
+    <TextView
+        android:id="@+id/tv_fix_def_value"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp5"
+        android:textSize="@dimen/sp20"
+        tools:text="@string/hello_blank_fragment"/>
+
+</LinearLayout>

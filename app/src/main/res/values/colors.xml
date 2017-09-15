@@ -11,4 +11,6 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="pink">#4CAF50</color>
+    <color name="state_pressed">#BBDEFB</color>
+    <color name="light_grey">#BDBDBD</color>
 </resources>

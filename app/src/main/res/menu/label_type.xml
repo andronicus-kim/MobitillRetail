@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_camera"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Category"/>
+    <item
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Fix"/>
+    <item
+        android:id="@+id/nav_slideshow"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Open"/>
+    <item
+        android:id="@+id/nav_manage"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Quantity"/>
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Menu_Category"/>
+    <item
+        android:id="@+id/nav_send"
+        android:icon="@drawable/ic_menu_send"
+        android:title="Service_Action"/>
+    <item
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Search_Category"/>
+    <item
+    android:icon="@drawable/ic_menu_gallery"
+    android:title="Product_Fix_Price"/>
+    <item
+    android:icon="@drawable/ic_menu_gallery"
+    android:title="Product_Flex_Price"/>
+    <item
+    android:icon="@drawable/ic_menu_gallery"
+    android:title="Barcode Search"/>
+    <item
+    android:icon="@drawable/ic_menu_gallery"
+    android:title="Option"/>
+
+</menu>

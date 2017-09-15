@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import ke.co.dataintegrated.mobitillretail.R;
 import ke.co.dataintegrated.mobitillretail.data.Item;
@@ -34,9 +33,9 @@ public class CartFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static CartFragment newInstance(List<Item> items) {
+    public static CartFragment newInstance(ArrayList<? extends Parcelable> items) {
         Bundle args = new Bundle();
-        args.putParcelableArrayList(SELECTED_ITEMS, (ArrayList<? extends Parcelable>) items);
+        args.putParcelableArrayList(SELECTED_ITEMS,items);
 
         CartFragment fragment = new CartFragment();
         fragment.setArguments(args);
@@ -79,7 +78,7 @@ public class CartFragment extends Fragment {
             mImageViewIcon.setImageResource(item.getImageResId());
             mTextViewTitle.setText(item.getTitle());
             mTextViewDesc.setText(item.getDescription());
-            mCheckBoxSelected.setChecked(item.isSelected());
+//            mCheckBoxSelected.setChecked(item.isSelected());
         }
     }
     private class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder>{
@@ -92,7 +91,7 @@ public class CartFragment extends Fragment {
 
         @Override
         public ItemViewHolder onCreateViewHolder(ViewGroup parent, int i) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.items_list_item,parent,false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_list_item,parent,false);
             return new ItemViewHolder(view);
         }
 

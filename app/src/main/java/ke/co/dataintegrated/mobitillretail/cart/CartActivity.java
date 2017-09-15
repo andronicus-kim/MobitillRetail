@@ -6,20 +6,27 @@ import android.support.v4.app.Fragment;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 import ke.co.dataintegrated.mobitillretail.R;
 import ke.co.dataintegrated.mobitillretail.SingleFragmentActivity;
+import ke.co.dataintegrated.mobitillretail.data.Item;
 import ke.co.dataintegrated.mobitillretail.payment.PayActivity;
 
 public class CartActivity extends SingleFragmentActivity {
 
-    public static Intent newIntent(Context context){
+    private static final String TAG = "CartActivity";
+    public static final String SELECTED_ITEMS = "SELECTED_ITEMS";
+
+    public static Intent newIntent(Context context, ArrayList<Item> selectedItems){
         Intent intent = new Intent(context,CartActivity.class);
+        intent.putExtra(SELECTED_ITEMS, selectedItems);
         return intent;
     }
 
     @Override
     protected Fragment createFragment() {
-        return CartFragment.newInstance(SingleFragmentActivity.getSelectedItems());
+        return CartFragment.newInstance(getIntent().getParcelableArrayListExtra(SELECTED_ITEMS));
     }
 
     @Override

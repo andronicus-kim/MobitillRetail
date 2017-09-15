@@ -12,10 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.List;
-
-import ke.co.dataintegrated.mobitillretail.cart.CartActivity;
-import ke.co.dataintegrated.mobitillretail.data.Item;
+import ke.co.dataintegrated.mobitillretail.items.ItemsCategoryFragment;
+import ke.co.dataintegrated.mobitillretail.items.ItemsFragment;
+import ke.co.dataintegrated.mobitillretail.utils.ActivityUtils;
 
 /**
  * Created by andronicus on 9/5/2017.
@@ -24,16 +23,7 @@ import ke.co.dataintegrated.mobitillretail.data.Item;
 public abstract class SingleFragmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    static List<Item> mItems;
-
-    public static void setSelectedItems(List<Item> items){
-        mItems = items;
-    }
-
-    public static List<Item> getSelectedItems(){
-       return mItems;
-    }
-
+    private ItemsFragment mItemsFragment;
     protected abstract Fragment createFragment();
 
     @LayoutRes
@@ -74,6 +64,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
+            navigationView.inflateMenu(R.menu.category_menu);
         }
 
         @Override
@@ -103,12 +94,16 @@ public abstract class SingleFragmentActivity extends AppCompatActivity
             if (id == R.id.search) {
                 return true;
             }if (id == R.id.done){
-                if (!mItems.isEmpty()) {
-                    startActivity(CartActivity.newIntent(SingleFragmentActivity.this));
-                }
-                else {
-                    return true;
-                }
+//                if (mItemsFragment == null){
+//                    mItemsFragment = ItemsFragment.newInstance();
+//                }
+//                ArrayList<Servicemenus> selectedItems = mItemsFragment.getSelectedItems();
+//                if (!selectedItems.isEmpty()) {
+//                    startActivity(CartActivity.newIntent(SingleFragmentActivity.this,selectedItems));
+//                }
+//                else {
+//                    return true;
+//                }
             }
             return super.onOptionsItemSelected(item);
         }
@@ -118,9 +113,15 @@ public abstract class SingleFragmentActivity extends AppCompatActivity
             // Handle navigation view item clicks here.
             int id = item.getItemId();
 
-            if (id == R.id.nav_camera) {
-                // Handle the camera action
-            } else if (id == R.id.nav_gallery) {
+            if (id == R.id.menu_merchant) {
+//                mItemsFragment = ItemsFragment.newInstance();
+//                ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),R.id.fragment_container, mItemsFragment);
+
+            } else if (id == R.id.menu_category) {
+                Fragment fragment = ItemsCategoryFragment.newInstance();
+                ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
+                        R.id.fragment_container,
+                        fragment);
 
             } else if (id == R.id.nav_slideshow) {
 
