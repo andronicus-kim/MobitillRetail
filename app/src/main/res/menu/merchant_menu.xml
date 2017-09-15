@@ -2,6 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
       tools:showIn="navigation_view">
+    <group
+        android:id="@+id/merchant_group">
+        <item android:title="Merchant Services"/>
             <item
                 android:id="@+id/menu_merchant"
                 android:icon="@drawable/ic_menu_camera"
@@ -14,4 +17,19 @@
                 android:id="@+id/nav_slideshow"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="Reports Merchant"/>
+    </group>
+    <group
+        android:id="@+id/service_group">
+        <item android:title="Sacco Services"/>
+        <item
+            android:id="@+id/sacco"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Sacco"/>
+        <item
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Print Sacco List"/>
+        <item
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Reports Sacco"/>
+    </group>
 </menu>

@@ -64,7 +64,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
-            navigationView.inflateMenu(R.menu.category_menu);
+            navigationView.inflateMenu(R.menu.merchant_menu);
         }
 
         @Override
@@ -114,14 +114,14 @@ public abstract class SingleFragmentActivity extends AppCompatActivity
             int id = item.getItemId();
 
             if (id == R.id.menu_merchant) {
-//                mItemsFragment = ItemsFragment.newInstance();
-//                ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),R.id.fragment_container, mItemsFragment);
-
-            } else if (id == R.id.menu_category) {
                 Fragment fragment = ItemsCategoryFragment.newInstance();
                 ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                         R.id.fragment_container,
                         fragment);
+//                mItemsFragment = ItemsFragment.newInstance();
+//                ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),R.id.fragment_container, mItemsFragment);
+
+            } else if (id == R.id.menu_category) {
 
             } else if (id == R.id.nav_slideshow) {
 
